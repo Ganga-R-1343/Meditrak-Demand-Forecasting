@@ -1,38 +1,39 @@
 # Meditrak-Demand-Forecasting
-# 💊 Meditrak Demand Forecasting
 
-**AI-Driven Multi-Store Demand Forecasting & Inventory Replenishment System**  
-*Developed as an AI Case Study for Dyashin Technosoft Pvt Ltd*
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+streamlit>=1.28.0
 
----
+# 💊 Meditrak: Multi-Store Demand Forecasting & Inventory Optimization
 
-## 📌 Project Overview
-Pharmacies and healthcare supply networks frequently encounter inventory challenges, including **medicine overstocking**, **expired drug waste**, and **out-of-stock emergency events**. 
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/streamlit-1.28+-FF4B4B.svg)](https://streamlit.io/)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.3+-F7931E.svg)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Meditrak** integrates a machine learning pipeline into pharmacy inventory software to predict upcoming daily/monthly demand, establish automated safety buffers, and generate replenishment orders tailored across multi-store locations.
-
----
-
-## 🎯 Key Objectives
-* **Optimize Multi-Branch Stocking:** Predict sales demands across individual pharmacy locations.
-* **Reduce Holding Costs & Waste:** Identify low-turnover items to prevent overordering and expiration losses.
-* **Eliminate Stockouts:** Calculate dynamic safety stock buffers ($1.5\times$ base demand) for critical medicines.
-* **Automate Purchasing Workflows:** Generate 30-day restock schedules categorized by priority.
-* **Analyze Demand Seasonality:** Visualize monthly demand curves and sales variance trends.
+**Meditrak** is a machine learning solution for retail pharmacy chains to prevent stockouts of critical medications, minimize drug expiration waste, and optimize safety stock levels across global branches.
 
 ---
 
-## 🛠️ Tech Stack & Tools
-* **Language:** Python
-* **Data Processing & ML:** Pandas, NumPy, Scikit-Learn (`RandomForestRegressor`), Joblib
-* **Visualization:** Matplotlib, Seaborn
-* **Web Dashboard:** Streamlit
+## ✨ Features
+
+* **🔮 Real-Time Demand Prediction:** Projects unit sales per product line across store locations using a Random Forest Regressor.
+* **🛡️ Dynamic Safety Stock Buffers:** Automatically calculates safety stock ($20\%$ buffer) to prevent stockouts.
+* **📋 Smart Reorder Targets:** Generates purchase order quantities using:
+  $$\text{Reorder Target} = \text{Predicted Demand} + \text{Safety Stock}$$
+* **📊 Regional Analytics:** Visualizes demand trends across drug categories and store locations.
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 Quick Start Guide
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Ganga-R-1343/Meditrak-Demand-Forecasting.git](https://github.com/Ganga-R-1343/Meditrak-Demand-Forecasting.git)
-   cd Meditrak-Demand-Forecasting
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/your-username/Meditrak-Demand-Forecasting.git](https://github.com/your-username/Meditrak-Demand-Forecasting.git)
+cd Meditrak-Demand-Forecasting
+
+📊 Model Performance MetricsMetricScoreMAE (Mean Absolute Error)~2.15 unitsMSE (Mean Squared Error)~7.80 unitsRMSE (Root Mean Squared Error)~2.79 units$R^2$ Score~0.91
